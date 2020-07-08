@@ -1,0 +1,88 @@
+<style>
+    .swiper-container0 {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .swiper-slide0 {
+        text-align: center;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-slide0 img{
+        width:100%;
+        height:auto;
+    }
+    .my-pagination{
+        position:absolute;
+        bottom:10px;
+    }
+</style>
+<div class="banner">
+    <!-- Swiper -->
+    <div class="swiper-container0" style="position:relative">
+        <div class="swiper-wrapper">
+            {notempty name='banner'}
+            {volist name='banner' id='val'}
+            <div class="swiper-slide swiper-slide0">
+                <img src="{$val.img|get_file_path}" alt="" title="{$val.title}"/>
+            </div>
+            {/volist}
+            {/notempty}
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination my-pagination" id="swiper-pagination-banner"></div>
+        <!-- Add Arrows -->
+        <a class="carousel-control-prev swiper-button-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" id="swiper-button-prev">
+            <span  aria-hidden="true"></span><!--class="carousel-control-prev-icon"-->
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next swiper-button-next" href="#carouselExampleIndicators" role="button" data-slide="next" id="swiper-button-next">
+            <span  aria-hidden="true"></span><!--class="carousel-control-next-icon"-->
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<!-- Initialize Swiper -->
+<script>
+    var swiper0 = new Swiper('.swiper-container0', {
+        grabCursor: true,//鼠标覆盖Swiper时指针会变成手掌形状
+        slidesPerView: 1,//容器默认显示数量
+        spaceBetween: 0,//在slide之间设置距离（单位px）
+        loop: true,//循环
+        pagination: {
+            el: '#swiper-pagination-banner',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '#swiper-button-next',
+            prevEl: '#swiper-button-prev',
+        },
+        speed:2000,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+    });
+
+    //鼠标覆盖停止自动切换
+    swiper0.el.onmouseover = function(){
+        swiper0.autoplay.stop();
+    }
+
+    //鼠标离开开始自动切换
+    swiper0.el.onmouseout = function(){
+        swiper0.autoplay.start();
+    }
+</script>

@@ -1,0 +1,84 @@
+{extend name="public/base" /}
+
+<!-- 当前页面的样式及JS -->
+{block name="custom"}
+<style>
+	.eng_shan{width:100%; height:30px; margin-top:5px;  margin:0 auto; font-size:14px; color:#000;}
+	.eng_shan a{text-decoration:none; color:#000;}
+	.eng_shan a:link,a:visited,a:active{color:#000;}
+	.eng_shan a:hover{color:#EC2029;}
+</style>
+{/block}
+
+<!--内容-->
+{block name="main"}
+
+<section class="banner-bottom">
+	<div class="container">
+		<h4 class="tittle" style="text-align: center;font-size: 2em;">{$details.title}</h4>
+		<p style="text-align: center;font-size: 1.2em;">发布：{$details.time}</p>
+		{$details.content|raw}
+		<div style="height: 1px; width: 100%; margin: 10px auto 10px auto; background: #000;"></div>
+		<div class="eng_shan">
+			上一篇：
+			{notempty name="up"}
+			<a href="{:url('index/brand/details')}?id={$up.id}">{$up.title}</a>
+			{/notempty}
+		</div>
+		<div class="eng_shan">
+			下一篇：
+			{notempty name="lo"}
+			<a href="{:url('index/brand/details')}?id={$lo.id}">{$lo.title}</a>
+			{/notempty}
+		</div>
+	</div>
+</section>
+
+{/block}
+
+{block name="model"}
+<!-- /js files -->
+<link href='/static/index/css/aos.css' rel='stylesheet prefetch' type="text/css" media="all" />
+<link href='/static/index/css/aos-animation.css' rel='stylesheet prefetch' type="text/css" media="all" />
+<script src='/static/index/js/aos.js'></script>
+<script src="/static/index/js/aosindex.js"></script>
+<!-- //js files -->
+<!--/ start-smoth-scrolling -->
+<script src="/static/index/js/move-top.js"></script>
+<script src="/static/index/js/easing.js"></script>
+<script>
+	jQuery(document).ready(function ($) {
+		$(".scroll").click(function (event) {
+			event.preventDefault();
+			$('html,body').animate({
+				scrollTop: $(this.hash).offset().top
+			}, 900);
+		});
+	});
+</script>
+<!--// end-smoth-scrolling -->
+
+<script>
+	$(document).ready(function () {
+		/*
+                                var defaults = {
+                                      containerID: 'toTop', // fading element id
+                                    containerHoverID: 'toTopHover', // fading element hover id
+                                    scrollSpeed: 1200,
+                                    easingType: 'linear'
+                                 };
+                                */
+
+		$().UItoTop({
+			easingType: 'easeOutQuart'
+		});
+
+	});
+</script>
+<a href="#home" class="scroll" id="toTop" style="display: block;">
+	<span id="toTopHover" style="opacity: 1;"> </span>
+</a>
+
+<!-- //Custom-JavaScript-File-Links -->
+<script src="/static/index/js/bootstrap.js"></script>
+{/block}

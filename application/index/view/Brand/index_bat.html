@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<title>品牌简介</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<link href="/static/index/css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="/static/index/css/style.css" rel='stylesheet' type='text/css' />
+	<link href="/static/index/css/fontawesome-all.css" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700" rel="stylesheet">
+</head>
+
+<body>
+	<!--/banner-->
+	<header>
+		<div class="top-bar_sub container-fluid">
+			<div class="row">
+				<div class="col-md-4 top-forms text-left mt-4"  data-aos="fade-up">
+					<span>Welcome Back!</span>
+					<span class="mx-lg-4 mx-md-2  mx-1">
+						<a href="login.html">
+							<i class="fas fa-lock"></i> Sign In</a>
+					</span>
+					<span>
+						<a href="register.html">
+							<i class="far fa-user"></i> Register</a>
+					</span>
+				</div>
+				<div class="col-md-4 logo text-center" data-aos="fade-up">
+					<a class="navbar-brand" href="index.html">
+						<i class="fab fa-gitkraken"></i> Baked</a>
+				</div>
+
+				<div class="col-md-4 log-icons text-right"  data-aos="fade-up">
+
+					<ul class="social_list1 mt-4">
+
+						<li>
+							<a href="#" class="facebook1 mx-2">
+								<i class="fab fa-facebook-f"></i>
+
+							</a>
+						</li>
+						<li>
+							<a href="#" class="twitter2">
+								<i class="fab fa-twitter"></i>
+
+							</a>
+						</li>
+						<li>
+							<a href="#" class="dribble3 mx-2">
+								<i class="fab fa-dribbble"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="pin">
+								<i class="fab fa-pinterest-p"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!--/banner-->
+	<div class="banner-inner" style="background-image: url('/static/index/images/brand/banner.png')">
+	</div>
+	<!--//banner-->
+	<!--/nav-->
+	<div class="header_top" id="home">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<button class="navbar-toggler navbar-toggler-right mx-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mx-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="{:url('index/index/index')}">首页
+							<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<li class="nav-item dropdown active">
+						<a class="nav-link dropdown-toggle" href="#" id="brandDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+						   aria-expanded="false">
+							公司文化
+						</a>
+						<div class="dropdown-menu" aria-labelledby="brandDropdown">
+							<a class="dropdown-item" href="{:url('index/brand/index')}">品牌简介</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="{:url('index/brand/index')}">品牌文化</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="{:url('index/brand/index')}">品牌风采</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="{:url('index/brand/index')}">品牌动态</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="productDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+						   aria-expanded="false">
+							产品展示
+						</a>
+						<div class="dropdown-menu" aria-labelledby="productDropdown">
+							<a class="dropdown-item" href="{:url('index/product/index')}">纸包鱼</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="{:url('index/product/index')}">纸火锅</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="{:url('index/product/index')}">冒菜</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="{:url('index/product/index')}">卤菜</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="{:url('index/product/index')}">凉菜</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="{:url('index/product/index')}">饮品</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="projectDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+						   aria-expanded="false">
+							项目优势
+						</a>
+						<div class="dropdown-menu" aria-labelledby="projectDropdown">
+							<a class="dropdown-item" href="{:url('index/project/index')}">产品优势</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="{:url('index/project/index')}">扶持优势</a>
+						</div>
+					</li>
+					<!--<li class="nav-item">
+						<a class="nav-link scroll" href="#menu">Menu</a>
+					</li>-->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="profitDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+						   aria-expanded="false">
+							盈利模式
+						</a>
+						<div class="dropdown-menu" aria-labelledby="brandDropdown">
+							<a class="dropdown-item" href="{:url('index/profit/index')}">合作支持</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="{:url('index/profit/index')}">客户权益</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="{:url('index/profit/index')}">合作流程</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="{:url('index/profit/index')}">合作条件</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="storiesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+						   aria-expanded="false">
+							成功案例
+						</a>
+						<div class="dropdown-menu" aria-labelledby="storiesDropdown">
+							<a class="dropdown-item" href="{:url('index/stories/index')}">效果图</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="{:url('index/stories/index')}">实体店</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="{:url('index/stories/index')}">加盟商</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{:url('index/poster/index')}">项目海报</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+						   aria-expanded="false">
+							联系我们
+						</a>
+						<div class="dropdown-menu" aria-labelledby="contactDropdown">
+							<a class="dropdown-item" href="{:url('index/contact/index')}">联系我们</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="{:url('index/contact/index')}">在线留言</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+	</div>
+	<!--//nav-->
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item">
+			<a href="index.html">公司文化</a>
+		</li>
+		<li class="breadcrumb-item active">品牌简介</li>
+	</ol>
+	<!--/main-->
+	<section class="banner-bottom">
+		<div class="container">
+			<h3 class="tittle">品牌简介</h3>
+			<div class="row inner-sec">
+				<img src="/static/index/images/brand/b1.jpg" width="100%" alt="">
+				<p>一纸馋隶属于成都餐协餐饮管理有限公司，公司于二零一二年在享有“美食之都”之称的成都成立，是经工商、税务、环保等部门登记注册的一家独立性集团化食品技术研发有限公司。成都餐协坚持以餐饮管理服务为本、坚持多元化发展方向、坚持以市场经营为导向，在稳步发展中不断创新，追求卓越，形成专业化服务、人性化管理、科学化发展的经营格局，短短五年时间，成都餐协凭借良好的品牌优势和专业诚信的优质服务成为餐饮界新贵，并不断扩大自己的经营空间。成都餐协拥有集运营管理、技术培训以及服务支持为一体的完整运营体系，实现了大陆业务无缝式链接，地域覆盖无盲区的目标。集团自成立以来始终为成为中国更绿色更健康的餐饮运营服务商而努力，坚持“为顾客创造价值，与顾客共同成长”的宗旨，“任人唯贤、唯才是举、选贤任能、用人所长”的人才观，吸引了大批人才，组建了一支注重实干、讲求效率的优良团队。我们的团队秉承“精品、服务、质量”的企业信条，把优质的产品和服务提供给客户，不断演绎着美食的至高境界，为社会创造财富和效益。</p>
+				<img src="/static/index/images/brand/b2.png" width="100%" alt="">
+			</div>
+			<div class="row inner-sec">
+				<div class="col-lg-6 about-img" data-aos="flip-right">
+					<img src="/static/index/images/brand/b3.png" class="img-fluid" alt="">
+				</div>
+				<div class="col-lg-6 about-info text-left" data-aos="flip-left" >
+					<h4 class="sub-hd mb-4">一纸馋纸包鱼<br><span style="font-size: 0.5em;">一纸馋隶属于成都餐协餐饮管理有限公司</span></h4>
+					<p>用品质与内涵走入大众视线。成都餐协高薪聘请做鱼大师-曾国立，将“潮流”、“分寸”、“私享”、“精致”等时尚概念，融入纸包鱼打造之中。用极客的心态，进行尺寸的把玩，以克制成巨制，用匠心承初心。蒜香纸包鱼、麻辣纸包鱼、香辣纸包鱼以及各种地域风情纸包鱼，玩转纸包鱼全能。</p>
+				</div>
+			</div>
+			<div class="row inner-sec">
+				<div class="col-lg-6 about-img" data-aos="flip-right">
+					<p>一纸馋纸包鱼的今天由无数个辛勤的昨天完美诠释，一纸馋纸包鱼的明天由无数个拼搏的今天来精彩续写。一纸馋人用激情、诚信创新、责任、专注、奉献的精神演绎美食的境界，与无数的梦想追逐者一起努力打造属于我们的成功！</p>
+				</div>
+				<div class="col-lg-6 about-info text-left" data-aos="flip-left" >
+					<img src="/static/index/images/brand/b4.png" class="img-fluid" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--//main-->
+	<!--footer-->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 footer-grid text-left" data-aos="fade-right" >
+					<h3>About US</h3>
+					<p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. lacinia eget consectetur sed, convallis at tellus..</p>
+					<div class="read">
+						<a href="single.html" class="btn btn-primary read-m">Read More</a>
+					</div>
+				</div>
+				<!-- subscribe -->
+				<div class="col-lg-8 subscribe-main footer-grid text-left" data-aos="fade-left">
+					<h2>Subscribe for hot updates</h2>
+					<div class="subscribe-main text-left">
+						<div class="subscribe-form">
+							<form action="#" method="post" class="subscribe_form">
+								<input class="form-control" type="email" placeholder="Enter your email..." required="">
+								<button type="submit" class="btn btn-primary submit">Submit</button>
+							</form>
+
+						</div>
+						<p>We respect your privacy.No spam ever!</p>
+					</div>
+					<!-- //subscribe -->
+					<div class="footer-cpy text-left">
+						<div class="copyrighttop">
+							<ul>
+								<li class="mx-lg-3 mx-md-2 mx-1">
+									<a class="facebook" href="#">
+										<i class="fab fa-facebook-f"></i>
+										<span>Facebook</span>
+									</a>
+								</li>
+								<li>
+									<a class="facebook" href="#">
+										<i class="fab fa-twitter"></i>
+										<span>Twitter</span>
+									</a>
+								</li>
+								<li class="mx-lg-3 mx-md-2 mx-1">
+									<a class="facebook" href="#">
+										<i class="fab fa-google-plus-g"></i>
+										<span>Google+</span>
+									</a>
+								</li>
+								<li>
+									<a class="facebook" href="#">
+										<i class="fab fa-pinterest-p"></i>
+										<span>Pinterest</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="copyrightbottom">
+							<p>Copyright &copy; 2018.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //footer -->
+		</div>
+	</footer>
+	<!---->
+
+	<!-- js -->
+	<script src="/static/index/js/jquery-2.2.3.min.js"></script>
+	<!-- //js -->
+	<!-- /js files -->
+	<link href='/static/index/css/aos.css' rel='stylesheet prefetch' type="text/css" media="all" />
+	<link href='/static/index/css/aos-animation.css' rel='stylesheet prefetch' type="text/css" media="all" />
+	<script src='/static/index/js/aos.js'></script>
+	<script src="/static/index/js/aosindex.js"></script>
+	<!-- //js files -->
+	<!--/ start-smoth-scrolling -->
+	<script src="/static/index/js/move-top.js"></script>
+	<script src="/static/index/js/easing.js"></script>
+	<script>
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 900);
+			});
+		});
+	</script>
+	<!--// end-smoth-scrolling -->
+
+	<script>
+		$(document).ready(function () {
+			/*
+									var defaults = {
+							  			containerID: 'toTop', // fading element id
+										containerHoverID: 'toTopHover', // fading element hover id
+										scrollSpeed: 1200,
+										easingType: 'linear' 
+							 		};
+									*/
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+	</script>
+	<a href="#home" class="scroll" id="toTop" style="display: block;">
+		<span id="toTopHover" style="opacity: 1;"> </span>
+	</a>
+
+	<!-- //Custom-JavaScript-File-Links -->
+	<script src="/static/index/js/bootstrap.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<header>
+    <div class="top-bar_sub container-fluid">
+        <div class="row">
+            <div class="col-md-4 top-forms text-left mt-4"  data-aos="fade-up">
+                <span>Welcome Back!</span>
+                <span class="mx-lg-4 mx-md-2  mx-1">
+						<a href="#">
+							<i class="fas fa-lock"></i> Sign In</a>
+					</span>
+                <span>
+						<a href="#">
+							<i class="far fa-user"></i> Register</a>
+					</span>
+            </div>
+            <div class="col-md-4 logo text-center" data-aos="fade-up">
+                <a class="navbar-brand" href="index.html">
+                    <!--<i class="fab fa-gitkraken"></i> Baked-->
+                    <img src="{$config.logo|get_file_path}" height="70px">
+                </a>
+            </div>
+            <div class="col-md-4 log-icons text-right"  data-aos="fade-up">
+                <ul class="social_list1 mt-4">
+                    <li>
+                        <a href="#" class="mx-2">
+                            <img src="/static/index/images/common/message.png" title="在线申请">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="mx-2" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2854196306&site=qq&menu=yes">
+                            <img src="/static/index/images/common/QQ.png" title="QQ">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="mx-2">
+                            <img src="/static/index/images/common/tel.png" title="400-8068-918">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:layer_load()" class="mx-2">
+                            <img src="/static/index/images/common/load.png" title="可行性报告">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<script src="/static/libs/layer/layer.js"></script>
+<script>
+    function layer_load() {
+        //页面层-图片
+      /*  layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: 'auto',
+            skin: 'layui-layer-molv', //没有背景色
+            shadeClose: true,
+            content: '<a href="https://rrx.cn/view-y4p1a5" target="_blank"><img src="/static/index/images/common/code.png" width="200px"></a>'
+        });*/
+        //自定页
+        layer.open({
+            type: 1,
+            title: '可行性报告',
+            skin: 'layui-layer-molv', //样式类名
+            closeBtn: 1, //不显示关闭按钮
+            anim: 1,
+            offset: 'auto',
+            shade: [0.8,'black'],    //遮罩层,
+            shadeClose: true, //开启遮罩关闭
+            content: '<a href="https://rrx.cn/view-y4p1a5" target="_blank"><img src="/static/index/images/common/code.png" width="200px"></a>'
+        });
+    }
+</script>

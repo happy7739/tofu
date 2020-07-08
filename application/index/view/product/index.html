@@ -1,0 +1,178 @@
+{extend name="public/base" /}
+
+<!-- 当前页面的样式及JS -->
+{block name="custom"}
+<style>
+	.case_page{width: 750px!important;}
+	.case_page ul li{font-size: 20px!important;}
+	.case_page ul li:first-child{width: 65px!important;}
+	.case_page ul li:last-child{width: 65px!important;}
+	.case_page{
+		width: 100%;
+		height: 25px;
+		margin:30px auto;
+	}
+	.case_page ul{
+		display:table;
+		text-align:center;
+		margin:0 auto;
+	}
+	.case_page ul li{
+		width: 23px;
+		height: 23px;
+		float: left;
+		margin-left: 14px;
+		font-size: 14px;
+		text-align: center;
+	}
+	/*.case_page ul li a{color: #999999;}*/
+	.case_page ul li:first-child{
+		width: 45px;
+		height: 25px;
+	}
+	.case_page ul li:last-child{
+		width: 45px;
+		height: 25px;
+	}
+</style>
+{/block}
+
+<!--内容-->
+{block name="main"}
+
+<section class="banner-bottom">
+	<div class="container">
+		<h3 class="tittle">
+			<span class="span-d">
+				产品展示
+			</span>
+		</h3>
+		<div class="row inner-sec">
+			<div class="tabs">
+				{notempty name='menu'}
+				<ul class="nav nav-pills mb-5 justify-content-center" id="pills-tab" role="tablist">
+					{volist name='menu' id='val'}
+					<li class="nav-item">
+						<a class="nav-link" id="my-pills-tab-{$val.id}" href="{:url($val['url_value'])}{neq name='val.params' value=''}?{$val.params}{/neq}" >{$val.title}</a>
+					</li>
+					{/volist}
+				</ul>
+				<script>
+					$(document).ready(function(){
+						var nav_id =  {$nav_id};
+						var str2 = '#my-pills-tab-' + nav_id;
+						//console.log(nav_id);
+						$(str2).addClass('active');
+					})
+				</script>
+				{/notempty}
+				<div class="tab-content" id="pills-tabContent">
+					<div class="row inner-sec">
+						{notempty name='data'}
+							{notempty name='data[0]'}
+							<div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
+								<div class="section_1_gallery_grid">
+									<a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="{$data[0]['img']|get_file_path}">
+										<div class="section_1_gallery_grid1">
+											<img src="{$data[0]['img']|get_file_path}" alt=" " class="img-fluid" />
+											<div class="proj_gallery_grid1_pos">
+												<h3>{$data[0]['title']}</h3>
+												<p>{$title}</p>
+											</div>
+										</div>
+									</a>
+								</div>
+								{notempty name='data[3]'}
+								<div class="section_1_gallery_grid" data-aos="zoom-in">
+									<a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="{$data[3]['img']|get_file_path}">
+										<div class="section_1_gallery_grid1">
+											<img src="{$data[3]['img']|get_file_path}" alt=" " class="img-fluid" />
+											<div class="proj_gallery_grid1_pos">
+												<h3>{$data[3]['title']}</h3>
+												<p>{$title}</p>
+											</div>
+										</div>
+									</a>
+								</div>
+								{/notempty}
+							</div>
+							{/notempty}
+							{notempty name='data[1]'}
+							<div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
+								<div class="section_1_gallery_grid">
+									<a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="{$data[1]['img']|get_file_path}">
+										<div class="section_1_gallery_grid1">
+											<img src="{$data[1]['img']|get_file_path}" alt=" " class="img-fluid" />
+											<div class="proj_gallery_grid1_pos">
+												<h3>{$data[1]['title']}</h3>
+												<p>{$title}</p>
+											</div>
+										</div>
+									</a>
+								</div>
+								{notempty name='data[4]'}
+								<div class="section_1_gallery_grid" data-aos="zoom-in">
+									<a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="{$data[4]['img']|get_file_path}">
+										<div class="section_1_gallery_grid1">
+											<img src="{$data[4]['img']|get_file_path}" alt=" " class="img-fluid" />
+											<div class="proj_gallery_grid1_pos">
+												<h3>{$data[4]['title']}</h3>
+												<p>{$title}</p>
+											</div>
+										</div>
+									</a>
+								</div>
+								{/notempty}
+							</div>
+							{/notempty}
+							{notempty name='data[2]'}
+							<div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
+								<div class="section_1_gallery_grid">
+									<a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="{$data[2]['img']|get_file_path}">
+										<div class="section_1_gallery_grid1">
+											<img src="{$data[2]['img']|get_file_path}" alt=" " class="img-fluid" />
+											<div class="proj_gallery_grid1_pos">
+												<h3>{$data[2]['title']}</h3>
+												<p>{$title}</p>
+											</div>
+										</div>
+									</a>
+								</div>
+								{notempty name='data[5]'}
+								<div class="section_1_gallery_grid" data-aos="zoom-in">
+									<a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="{$data[5]['img']|get_file_path}">
+										<div class="section_1_gallery_grid1">
+											<img src="{$data[5]['img']|get_file_path}" alt=" " class="img-fluid" />
+											<div class="proj_gallery_grid1_pos">
+												<h3>{$data[5]['title']}</h3>
+												<p>{$title}</p>
+											</div>
+										</div>
+									</a>
+								</div>
+								{/notempty}
+							</div>
+							{/notempty}
+						{/notempty}
+					</div>
+					<!-- 分页 -->
+					<div class="case_page">
+						{$render|raw}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{/block}
+
+{block name="model"}
+<!-- simpleLightbox -->
+<script src="/static/index/js/simpleLightbox.js"></script>
+<script>
+	$('.proj_gallery_grid a').simpleLightbox();
+</script>
+<!-- //simpleLightbox -->
+
+{/block}

@@ -1,0 +1,29 @@
+{extend name="public/base" /}
+
+<!-- 当前页面的样式及JS -->
+{block name="custom"}{/block}
+
+<!--内容-->
+{block name="main"}
+
+<section class="banner-bottom">
+	<div class="container">
+		{include file="public/title" /}
+		<div class="row inner-sec">
+			<div class="col-lg-6 about-info text-left" data-aos="flip-right" style="background-image: url('/static/index/images/profit/bg4.png')">
+				<p>1.有独立承担民事责任能力的自然人或独立承担民事责任的企业法人。</p>
+				<p>2.有相应的投资能力和风险意识。</p>
+				<p>3.有一定的启动资金、市场经验、具备较强的经营意识,共同发展的信心。</p>
+				<p>4.具有良好的信誉基础和努力向上的创业激情。</p>
+				<p>5.认同公司的经营理念和发展目标，愿与公司携手，共同开拓国内市场。</p>
+			</div>
+			<div class="col-lg-6 about-img" data-aos="flip-left" >
+				<img src="/static/index/images/profit/bg4.png" class="img-fluid" alt="">
+			</div>
+		</div>
+	</div>
+</section>
+
+{/block}
+
+{block name="model"}{/block}

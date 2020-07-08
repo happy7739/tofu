@@ -1,0 +1,31 @@
+{extend name="public/base" /}
+
+<!-- 当前页面的样式及JS -->
+{block name="custom"}{/block}
+
+<!--内容-->
+{block name="main"}
+
+<section class="banner-bottom">
+	<div class="container">
+		<h3 class="tittle">
+			{include file="public/title" /}
+		</h3>
+		<div class="row inner-sec">
+			<div class="col-lg-6 about-img" data-aos="flip-right">
+				<img src="/static/index/images/brand/s1.jpg" class="img-fluid" alt="">
+			</div>
+			<div class="col-lg-6 about-info text-left" data-aos="flip-left" >
+				<img src="/static/index/images/brand/s2.jpg" class="img-fluid" alt="" width="80%">
+				<h4><br/>在美好的年华、在充满热情的年龄、在具有前景的行业，我们用拼搏展现我们的风采，用成就铸就我们的未来。</h4>
+			</div>
+		</div>
+		<div class="row inner-sec">
+			<img src="/static/index/images/brand/s3.jpg" width="100%" alt="" >
+		</div>
+	</div>
+</section>
+
+{/block}
+
+{block name="model"}{/block}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>{$title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="" />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <link href="/static/index/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <!--<link rel="stylesheet" href="/static/index/css/flexslider.css" type="text/css" media="screen" property="" />-->
+    <link href="/static/index/css/style.css" rel='stylesheet' type='text/css' />
+    <link href="/static/index/css/fontawesome-all.css" rel="stylesheet">
+    <link href="/static/index/css/simpleLightbox.css" rel='stylesheet' type='text/css' />
+    <link href="http://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Lato:100i,300,300i,400,400i,700,700i,900" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700" rel="stylesheet">
+    <!-- js -->
+    <script src="/static/index/js/jquery-2.2.3.min.js"></script>
+    <!-- //js -->
+    <!-- 当前页面的样式及JS -->
+    {block name="custom"}
+    {/block}
+</head>
+<body>
+{block name="header"}{include file="public/header" /}{/block}
+<!--/banner-->
+{empty name='page_img'}
+<div class="banner-inner">
+</div>
+{/empty}
+{notempty name='page_img'}
+<div class="banner-inner" style="background-image: url({$page_img.img|get_file_path});">
+</div>
+{/notempty}
+<!--//banner-->
+<!--/nav-->
+{block name="nav"}{include file="public/nav" /}{/block}
+<!--//nav-->
+<ol class="breadcrumb" style="margin-bottom: 0px;">
+    <li class="breadcrumb-item">
+        <a href="{:url('index/index/index')}">首页</a>
+    </li>
+    <li class="breadcrumb-item active">{$title}</li>
+</ol>
+{block name="main"}{/block}
+{block name="footer"}{include file="public/footer" /}{/block}
+{block name="model"}{/block}
+{include file="public/model" /}
+
+</body>
+</html>

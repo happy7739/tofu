@@ -1,0 +1,397 @@
+{extend name="public/index" /}
+
+<!-- 当前页面的样式及JS -->
+{block name="custom"}
+<!--swiper-->
+<link rel="stylesheet" href="/static/index/swiper/css/swiper.min.css">
+<!-- Swiper JS -->
+<script src="/static/index/swiper/js/swiper.min.js"></script>
+{/block}
+
+<!--内容-->
+{block name="main"}
+
+<!--/inner-content-->
+<!--/banner-bottom-->
+<section class="banner-bottom" id="brand">
+    <div class="container">
+        <h3 class="tittle">
+            <span class="span-d">
+                品牌故事
+            </span>
+        </h3>
+        <div class="row inner-sec">
+            <div class="col-lg-6 about-img" data-aos="flip-right">
+                <img src="/static/index/images/index/brand.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 about-info text-left" data-aos="flip-left" >
+                <p>被霓虹灯渲染的城市夜晚，映照着形单影只的崔南杨老师。他找遍整个城市，也没有找到适合一个人吃的烤鱼。他想“既然找不到，不如自己创造一家”。</p>
+                <p>首当其冲的问题便是鱼的选择，经过多方比较，湄公鱼成了崔南杨老师的最佳选择，不仅因湄公鱼的肉质肥嫩，口感细腻鲜美；更是因为其兼具了鱼类所共有的营养价值，含动物蛋白和钙、磷及维生素A、D、B1、B2且易消化吸收，有防治心脑血管疾病和保护视力等功效。</p>
+                <p>选好了鱼后，崔南杨老师放弃了传统烤鱼模式，让烤鱼也能成为一人食新式快餐，传达一个人的烤鱼，两个人的故事，三个人的欢乐理念。当然为了迎合不同的人群，他也创造了四种不同的口味，还加入了香辣蟹和花甲的选择，只想让跟他一样孤身漂泊的人也能从容地吃一顿烤鱼，让繁忙的城市白领，在短暂的时间里，心满意足的解决午餐。城市很大，心却很暖，一个人也要好好吃饭。</p>
+                <p>壹纸馋锡纸烤鱼饭----四川唯一一家商标加盟品牌。</p>
+                <p>十年经验累积，技术沉淀，不断挑战创新，致力于打造时尚烤鱼新快餐！</p>
+                <div class="view my-4">
+                    <a href="#brand" class="btn btn-primary read-m" style="padding: 0.3em 2em;">YZC XIZHIKAOYU</a>
+                </div>
+                <!--<img src="/static/index/images/index/letter.png" class="img-fluid" alt="">-->
+            </div>
+        </div>
+    </div>
+</section>
+<!--//banner-bottom-->
+
+<!--/banner-bottom-->
+<style>
+    .my-blog-item img {
+        box-shadow: 2px 2px 3px 2px aliceblue;
+        margin: 0 15px;
+        width: 250px;
+    }
+</style>
+<section class="grid-info-section">
+    <div class="container">
+        <h3 class="tittle">
+            <span class="span-f">
+            菜品推荐
+            </span>
+        </h3>
+        <div class="row inner-sec">
+            {notempty name='product'}
+            {volist name='product' id='val'}
+            <div class="my-blog-item text-center"><!--blog-item-->
+                <img src="{$val.img|get_file_path}" alt="{$val.desc}" class="img-fluid"/>
+                <div class="floods-text">
+                    <h3>{$val.title}</h3>
+                </div>
+            </div>
+            {/volist}
+            {/notempty}
+        </div>
+    </div>
+</section>
+<!--//banner-bottom-->
+<!--/Menu-->
+<style>
+    .blog-item img {
+        box-shadow: 0px 0px black;
+    }
+    #swiper_container_store {
+        margin: 0 auto;
+        padding-top: 4px;
+    }
+    #swiper_container_store .swiper-wrapper {
+        -webkit-transition-timing-function: linear; /*之前是ease-out*/
+        -moz-transition-timing-function: linear;
+        -ms-transition-timing-function: linear;
+        -o-transition-timing-function: linear;
+        transition-timing-function: linear;
+        margin: 0 auto;
+    }
+    #swiper_container_store img{
+        width: 270px;
+        border: 0 none;
+        vertical-align: top;
+    }
+    #swiper_container_store p{
+        color: #FFF;
+        font-size: 2em;
+        background-color: #D6664E;
+    }
+    #btn-prex-store,#btn-next-store{
+        position: absolute;
+        cursor: pointer;
+        z-index: 100;
+        padding-top: 100px;
+        color: #D6664E;
+    }
+    #btn-prex-store{
+        left: -50px;
+    }
+    #btn-next-store{
+        right: -50px;
+    }
+</style>
+<section class="banner-bottom">
+    <div class="container">
+        <h3 class="tittle">
+            <span class="span-d">
+                STORE DISPLAY
+            </span>
+        </h3>
+        <div class="row inner-sec">
+            <div class="swiper-button-prev" id="btn-prex-store"></div>
+            <div class="swiper-container swiper_container_store" id="swiper_container_store">
+                <div class="swiper-wrapper">
+                    {notempty name='store'}
+                    {volist name='store' id='val'}
+                    <div class="swiper-slide swiper-slide-store">
+                        <div>
+                            <img src="{$val.img|get_file_path}" alt="{$val.desc}" class="img-fluid" />
+                            <p>{$val.title}</p>
+                        </div>
+                    </div>
+                    {/volist}
+                    {/notempty}
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination" id="swiper-pagination-store"></div>
+            </div>
+            <div class="swiper-button-next" id="btn-next-store"></div>
+        </div>
+        <script>
+            var swiper_store = new Swiper('.swiper_container_store', {
+                grabCursor: true,
+                speed: 5000,
+                /*slidesPerView: 4,*/
+                slidesPerView: 'auto',
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 0,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '#swiper-pagination-store',
+                    type: 'progressbar',
+                },
+                /*breakpointsInverse: false,*/
+                breakpoints: {
+                    //当宽度大于等于
+                    270: {
+                        slidesPerView: 1,
+                        spaceBetween: 10
+                    },
+                    540: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    810: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    },
+                    1080: {
+                        slidesPerView: 4,
+                        spaceBetween: 20
+                    }
+                }
+            });
+            /*鼠标移入停止轮播，鼠标离开 继续轮播*/
+            //鼠标覆盖停止自动切换
+            swiper_store.el.onmouseover = function(){
+                swiper_store.autoplay.stop();
+            }
+
+            //鼠标离开开始自动切换
+            swiper_store.el.onmouseout = function(){
+                swiper_store.autoplay.start();
+            }
+            $("#btn-next-store").click(function(){
+                swiper_store.params.autoplay.reverseDirection=false;
+            });
+            $("#btn-prex-store").click(function(){
+                swiper_store.params.autoplay.reverseDirection=true;
+            });
+        </script>
+    </div>
+</section>
+<!--//Menu-->
+
+<style>
+    .intrbox {
+        width: 1200px;
+        height: 356px;
+        margin-top: 57px;
+        position: relative
+    }
+    .introut {
+        width: 1200px;
+        height: 356px;
+        overflow: hidden;
+        position: relative
+    }
+    .introut img {
+        width: 1200px;
+        height: 357px
+    }
+    .introut .cover {
+        width: 700px;
+        height: 357px;
+        -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        transform: translateX(100%);
+        padding-top: 88px;
+        color: #fff;
+        padding-right: 152px;
+        padding-left: 180px;
+        position: absolute;
+        right: 0;
+        top: 0px;
+        background: url(/static/index/images/index/D6664E.png)
+    }
+    .introut:hover .cover {
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0)
+    }
+    .introut .btn {
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 5px ;
+        border-radius: 10px;
+    }
+    .introut p{
+        color: black;
+        margin-bottom:10px;
+    }
+    .introut .btn:hover {
+        background: #000;
+        border-color: #000
+    }
+    .trans p {
+        text-indent: 2em;
+    }
+</style>
+<section class="grid-info-section">
+    <div class="container">
+        <h3 class="tittle">
+            <span class="span-f">
+            公司介绍
+            </span>
+        </h3>
+        <div class="row">
+            <div class="intrbox">
+                <div class="introut">
+                    <img alt="" src="/static/index/images/index/team.jpg" />
+                    <div class="cover trans">
+                        <h3>成都餐协餐饮管理有限公司</h3>
+                        <p>成都餐协餐饮管理有限公司，于二零一二年在享有“美食之都”之称的成都成立。成都餐协坚持以餐饮管理服务为本，坚持多元化发展方向、以市场经营为导向，在稳步发展中不断创新，形成了集运营管理、技术培训以及服务支持为一体的完整运营体系。集团自成立以来始......</p>
+                        <a href="{:url('index/brand/index')}" class="btn">MORE +</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .swiper-container {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .swiper-slide {
+        text-align: center;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-slide img{
+        width:100%;
+        height:auto;
+    }
+
+    .news_list {
+
+    }
+    .news_list li {
+        float: left;
+        /*border-bottom: 1px dashed;*/
+        width: 100%;
+    }
+    .news_list span {
+        float: right;
+    }
+    .news_list p {
+        float: left;
+        max-width: 400px;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+        text-indent: 0em;
+    }
+    .news_list ul, li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+</style>
+<section class="banner-bottom">
+    <div class="container">
+        <h3 class="tittle">
+            <span class="span-d">
+                News Center
+            </span>
+        </h3>
+        <div class="row inner-sec">
+            <div class="col-lg-6" data-aos="flip-right">
+                <div class="swiper-container swiper-container-news" id="swiper-container-news">
+                    <div class="swiper-wrapper">
+                        {notempty name='news'}
+                        {volist name='news' id='val'}
+                        <div class="swiper-slide">
+                            <img src="{$val.img|get_file_path}" alt=" " class="img-fluid">
+                        </div>
+                        {/volist}
+                        {/notempty}
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 about-info text-left" data-aos="flip-left" >
+                <div>
+                    <ul class="news_list">
+                        {notempty name='news'}
+                        {volist name='news' id='val'}
+                        <li>
+                            <a href="{:url('index/brand/details')}?id={$val.id}">
+                                <p>{$val.title}</p>
+                            </a>
+                            <span>{$val.time}</span>
+                        </li>
+                        {/volist}
+                        {/notempty}
+                    </ul>
+                </div>
+                <div class="view my-4">
+                    <a href="{:url('index/brand/news')}" class="btn btn-primary read-m" style="margin-top: 1em;">查看更多</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    var swiper_news = new Swiper('#swiper-container-news', {
+        speed:2000,
+        grabCursor: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            stopOnLastSlide: false,
+            disableOnInteraction: false,
+        },
+    });
+    /*鼠标移入停止轮播，鼠标离开 继续轮播*/
+    //鼠标覆盖停止自动切换
+    swiper_news.el.onmouseover = function(){
+        swiper_news.autoplay.stop();
+    }
+
+    //鼠标离开开始自动切换
+    swiper_news.el.onmouseout = function(){
+        swiper_news.autoplay.start();
+    }
+</script>
+<!--//inner-content-->
+
+{/block}

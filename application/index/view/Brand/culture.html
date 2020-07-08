@@ -1,0 +1,32 @@
+{extend name="public/base" /}
+
+<!-- 当前页面的样式及JS -->
+{block name="custom"}{/block}
+
+<!--内容-->
+{block name="main"}
+
+<section class="banner-bottom">
+	<div class="container">
+		{include file="public/title" /}
+		<div class="row inner-sec">
+			<img src="/static/index/images/brand/c1.png" width="100%" alt="" style="background-color: #2D2C32">
+			<img src="/static/index/images/brand/c2.jpg" width="100%" alt="">
+		</div>
+		<div class="row inner-sec">
+			<div class="col-lg-6 about-img" data-aos="flip-right">
+				<h4 class="sub-hd mb-4">企业经营宗旨</h4>
+				<p>通过不断引进专业的人才来给品牌输入新鲜而又富有活力的竞争“血液”，让品牌在市场上拥有更持久的生命力让投资者始终保持盈利增加的趋势</p>
+				<h4 class="sub-hd mb-4">企业价值观</h4>
+				<p>秉承“工于至诚，共同进步”的价值观把“注重实干讲究效率”作为企业的行为准则，将“团结友爱、相互信任的”作为员工的行为准则朝着建设“更盈利更优良、更受尊重”的优异餐饮行业的愿景迈进</p>
+			</div>
+			<div class="col-lg-6 about-info text-left" data-aos="flip-left" >
+				<img src="/static/index/images/brand/c3.png" class="img-fluid" alt="" style="background-color: #2D2C32">
+			</div>
+		</div>
+	</div>
+</section>
+
+{/block}
+
+{block name="model"}{/block}
