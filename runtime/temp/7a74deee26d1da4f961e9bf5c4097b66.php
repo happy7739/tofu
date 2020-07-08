@@ -1,4 +1,4 @@
-<?php /*a:7:{s:58:"F:\gitProject\Tofu\application\index\view\index\index.html";i:1593420879;s:59:"F:\gitProject\Tofu\application\index\view\public\index.html";i:1593326855;s:60:"F:\gitProject\Tofu\application\index\view\public\header.html";i:1592982431;s:60:"F:\gitProject\Tofu\application\index\view\public\banner.html";i:1592962010;s:57:"F:\gitProject\Tofu\application\index\view\public\nav.html";i:1592548201;s:60:"F:\gitProject\Tofu\application\index\view\public\footer.html";i:1594189925;s:59:"F:\gitProject\Tofu\application\index\view\public\model.html";i:1593326855;}*/ ?>
+<?php /*a:7:{s:58:"F:\gitProject\Tofu\application\index\view\index\index.html";i:1594195636;s:59:"F:\gitProject\Tofu\application\index\view\public\index.html";i:1593326855;s:60:"F:\gitProject\Tofu\application\index\view\public\header.html";i:1592982431;s:60:"F:\gitProject\Tofu\application\index\view\public\banner.html";i:1592962010;s:57:"F:\gitProject\Tofu\application\index\view\public\nav.html";i:1592548201;s:60:"F:\gitProject\Tofu\application\index\view\public\footer.html";i:1594189925;s:59:"F:\gitProject\Tofu\application\index\view\public\model.html";i:1593326855;}*/ ?>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -443,7 +443,8 @@
     #swiper_container_store p{
         color: #FFF;
         font-size: 2em;
-        background-color: #D6664E;
+        background-color: #184799;
+        text-indent: 0;
     }
     #btn-prex-store,#btn-next-store{
         position: absolute;
@@ -573,7 +574,7 @@
         position: absolute;
         right: 0;
         top: 0px;
-        background: url(/static/index/images/index/D6664E.png)
+        background: url(/static/index/images/index/184799.png)
     }
     .introut:hover .cover {
         -webkit-transform: translateX(0);
