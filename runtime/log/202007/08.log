@@ -2322,3 +2322,371 @@
 [ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 779 LIMIT 1 [ RunTime:0.000507s ]
 [ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 1109 LIMIT 1 [ RunTime:0.000479s ]
 [ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 1116 LIMIT 1 [ RunTime:0.000534s ]
+---------------------------------------------------------------
+
+[2020-07-08T16:53:34+08:00] 127.0.0.1 GET tofu.com/
+[运行时间：2.081938s] [吞吐率：0.48req/s] [内存消耗：3,625.45kb] [文件加载：113]
+[ info ] [ LANG ] F:\gitProject\tofu\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ucrt74p3f6mmjb62oc30ed913h',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'tofu.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] F:\gitProject\tofu\application\index\view\index\index.html [ array (
+  0 => 'title',
+  1 => 'config',
+  2 => 'nav',
+  3 => 'footer',
+  4 => 'menu',
+  5 => 'nav_pid',
+  6 => 'nav_id',
+  7 => 'product',
+  8 => 'banner',
+  9 => 'store',
+  10 => 'news',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006004s ] mysql:host=127.0.0.1;port=3306;dbname=tofu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_config` [ RunTime:0.047257s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `dp_admin_config` [ RunTime:0.000742s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_module` [ RunTime:0.036681s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `dp_admin_module` WHERE  `config` <> '' [ RunTime:0.000644s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook` [ RunTime:0.034854s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_hook` WHERE  `status` = 1 [ RunTime:0.000879s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_plugin` [ RunTime:0.033867s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_plugin` WHERE  `status` = 1 [ RunTime:0.000766s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook_plugin` [ RunTime:0.036450s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_hook_plugin` WHERE  `status` = 1 ORDER BY `hook`,`sort` [ RunTime:0.000956s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_home_navigation` [ RunTime:0.032494s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title` FROM `dp_home_navigation` WHERE  `url_value` = 'index/index/index'  AND `pid` <> 0 LIMIT 1 [ RunTime:0.000680s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `dp_home_navigation` WHERE  `url_value` = 'index/index/index'  AND `pid` = 0 LIMIT 1 [ RunTime:0.000652s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 1  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000518s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_home_page_img` [ RunTime:0.031241s ]
+[ sql ] [ SQL ] SELECT `id`,`alt`,`title`,`img` FROM `dp_home_page_img` WHERE  ( find_in_set('1',pid) ) ORDER BY `sort` LIMIT 1 [ RunTime:0.000674s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_configuration` [ RunTime:0.030526s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_configuration` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000630s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 0  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000734s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 1  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000573s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 38  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000616s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 43  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000633s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 50  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000584s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 53  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000723s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 58  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000911s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 66  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000769s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 63  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000909s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 0  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000759s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 38  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000798s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 43  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000611s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 50  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.001847s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 53  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000671s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 58  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000611s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 66  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000587s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 63  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000591s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_home_product` [ RunTime:0.031481s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`desc`,`img` FROM `dp_home_product` WHERE  `is_tui` = 1 ORDER BY `id`,`sort` LIMIT 4 [ RunTime:0.000676s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_home_banner` [ RunTime:0.030841s ]
+[ sql ] [ SQL ] SELECT `id`,`img`,`alt`,`title` FROM `dp_home_banner` WHERE  `status` = 1 ORDER BY `sort` [ RunTime:0.000809s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_home_store` [ RunTime:0.036709s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`desc`,`img` FROM `dp_home_store` WHERE  `is_tui` = 1 ORDER BY `id`,`sort` LIMIT 20 [ RunTime:0.001200s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_home_news` [ RunTime:0.030455s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`desc`,`img`,`time` FROM `dp_home_news` WHERE  `is_tui` = 1 ORDER BY `id`,`sort` LIMIT 12 [ RunTime:0.021296s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_attachment` [ RunTime:0.048074s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 1116 LIMIT 1 [ RunTime:0.000858s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 1128 LIMIT 1 [ RunTime:0.000642s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 1122 LIMIT 1 [ RunTime:0.000757s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 1129 LIMIT 1 [ RunTime:0.000931s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 1130 LIMIT 1 [ RunTime:0.001243s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 804 LIMIT 1 [ RunTime:0.000709s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 805 LIMIT 1 [ RunTime:0.000556s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 825 LIMIT 1 [ RunTime:0.000653s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 826 LIMIT 1 [ RunTime:0.000519s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 861 LIMIT 1 [ RunTime:0.000602s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 862 LIMIT 1 [ RunTime:0.000696s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 863 LIMIT 1 [ RunTime:0.000584s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 864 LIMIT 1 [ RunTime:0.000590s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 865 LIMIT 1 [ RunTime:0.000581s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 866 LIMIT 1 [ RunTime:0.000568s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 867 LIMIT 1 [ RunTime:0.000575s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000596s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 72 LIMIT 1 [ RunTime:0.000525s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 76 LIMIT 1 [ RunTime:0.000533s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 123 LIMIT 1 [ RunTime:0.000623s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 138 LIMIT 1 [ RunTime:0.000498s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 179 LIMIT 1 [ RunTime:0.000482s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 180 LIMIT 1 [ RunTime:0.000651s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 212 LIMIT 1 [ RunTime:0.000762s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 217 LIMIT 1 [ RunTime:0.000473s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 300 LIMIT 1 [ RunTime:0.000529s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 305 LIMIT 1 [ RunTime:0.000497s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 779 LIMIT 1 [ RunTime:0.000467s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 1109 LIMIT 1 [ RunTime:0.000423s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 1116 LIMIT 1 [ RunTime:0.000735s ]
+---------------------------------------------------------------
+
+[2020-07-08T16:57:01+08:00] 127.0.0.1 GET tofu.com/index/contact/index.html
+[运行时间：0.779685s] [吞吐率：1.28req/s] [内存消耗：3,431.33kb] [文件加载：109]
+[ info ] [ LANG ] F:\gitProject\tofu\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ucrt74p3f6mmjb62oc30ed913h',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tofu.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'tofu.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] F:\gitProject\tofu\application\index\view\contact\index.html [ array (
+  0 => 'page_img',
+  1 => 'title',
+  2 => 'config',
+  3 => 'nav',
+  4 => 'footer',
+  5 => 'menu',
+  6 => 'nav_pid',
+  7 => 'nav_id',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016042s ] mysql:host=127.0.0.1;port=3306;dbname=tofu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_config` [ RunTime:0.050050s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `dp_admin_config` [ RunTime:0.000668s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_module` [ RunTime:0.040367s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `dp_admin_module` WHERE  `config` <> '' [ RunTime:0.000592s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook` [ RunTime:0.044048s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_hook` WHERE  `status` = 1 [ RunTime:0.000891s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_plugin` [ RunTime:0.037841s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_plugin` WHERE  `status` = 1 [ RunTime:0.000609s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook_plugin` [ RunTime:0.037082s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_hook_plugin` WHERE  `status` = 1 ORDER BY `hook`,`sort` [ RunTime:0.002367s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_home_navigation` [ RunTime:0.042545s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title` FROM `dp_home_navigation` WHERE  `url_value` = 'index/contact/index'  AND `pid` <> 0 LIMIT 1 [ RunTime:0.000693s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 63  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000845s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_home_page_img` [ RunTime:0.034882s ]
+[ sql ] [ SQL ] SELECT `id`,`alt`,`title`,`img` FROM `dp_home_page_img` WHERE  ( find_in_set('64',pid) ) ORDER BY `sort` LIMIT 1 [ RunTime:0.001073s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_configuration` [ RunTime:0.039975s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_configuration` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000747s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 0  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000953s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 1  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000496s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 38  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000508s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 43  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000379s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 50  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 53  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000400s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 58  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000481s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 66  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 63  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 0  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000348s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 38  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000305s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 43  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000383s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 50  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000287s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 53  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000451s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 58  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 66  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000436s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 63  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000431s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_attachment` [ RunTime:0.032358s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 1116 LIMIT 1 [ RunTime:0.000747s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 1127 LIMIT 1 [ RunTime:0.000601s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 1109 LIMIT 1 [ RunTime:0.000808s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 1116 LIMIT 1 [ RunTime:0.000894s ]
+---------------------------------------------------------------
+
+[2020-07-08T16:57:05+08:00] 127.0.0.1 GET tofu.com/index/index/index.html
+[运行时间：0.653181s] [吞吐率：1.53req/s] [内存消耗：3,421.70kb] [文件加载：111]
+[ info ] [ LANG ] F:\gitProject\tofu\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ucrt74p3f6mmjb62oc30ed913h',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tofu.com/index/contact/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'tofu.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] F:\gitProject\tofu\application\index\view\index\index.html [ array (
+  0 => 'title',
+  1 => 'config',
+  2 => 'nav',
+  3 => 'footer',
+  4 => 'menu',
+  5 => 'nav_pid',
+  6 => 'nav_id',
+  7 => 'product',
+  8 => 'banner',
+  9 => 'store',
+  10 => 'news',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003363s ] mysql:host=127.0.0.1;port=3306;dbname=tofu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_config` [ RunTime:0.047268s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `dp_admin_config` [ RunTime:0.000488s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_module` [ RunTime:0.036867s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `dp_admin_module` WHERE  `config` <> '' [ RunTime:0.002025s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook` [ RunTime:0.036615s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_hook` WHERE  `status` = 1 [ RunTime:0.000492s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_plugin` [ RunTime:0.036617s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_plugin` WHERE  `status` = 1 [ RunTime:0.001711s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook_plugin` [ RunTime:0.035385s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_hook_plugin` WHERE  `status` = 1 ORDER BY `hook`,`sort` [ RunTime:0.000494s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_home_navigation` [ RunTime:0.035194s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title` FROM `dp_home_navigation` WHERE  `url_value` = 'index/index/index'  AND `pid` <> 0 LIMIT 1 [ RunTime:0.001893s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `dp_home_navigation` WHERE  `url_value` = 'index/index/index'  AND `pid` = 0 LIMIT 1 [ RunTime:0.001241s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 1  AND `status` = 1 ORDER BY `sort` [ RunTime:0.001741s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_home_page_img` [ RunTime:0.037401s ]
+[ sql ] [ SQL ] SELECT `id`,`alt`,`title`,`img` FROM `dp_home_page_img` WHERE  ( find_in_set('1',pid) ) ORDER BY `sort` LIMIT 1 [ RunTime:0.000430s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_configuration` [ RunTime:0.028895s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_configuration` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000454s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 0  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000514s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 1  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 38  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 43  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000385s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 50  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 53  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000355s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 58  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000418s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 66  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000381s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 63  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 0  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 38  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 43  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000671s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 50  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.001095s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 53  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.001173s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 58  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000922s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 66  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000698s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 63  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000480s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_home_product` [ RunTime:0.039606s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`desc`,`img` FROM `dp_home_product` WHERE  `is_tui` = 1 ORDER BY `id`,`sort` LIMIT 4 [ RunTime:0.000534s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_home_banner` [ RunTime:0.040586s ]
+[ sql ] [ SQL ] SELECT `id`,`img`,`alt`,`title` FROM `dp_home_banner` WHERE  `status` = 1 ORDER BY `sort` [ RunTime:0.002149s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_home_store` [ RunTime:0.036709s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`desc`,`img` FROM `dp_home_store` WHERE  `is_tui` = 1 ORDER BY `id`,`sort` LIMIT 20 [ RunTime:0.000717s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_home_news` [ RunTime:0.039192s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`desc`,`img`,`time` FROM `dp_home_news` WHERE  `is_tui` = 1 ORDER BY `id`,`sort` LIMIT 12 [ RunTime:0.001733s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_attachment` [ RunTime:0.024903s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 1116 LIMIT 1 [ RunTime:0.001486s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 1128 LIMIT 1 [ RunTime:0.001521s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 1122 LIMIT 1 [ RunTime:0.000811s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 1129 LIMIT 1 [ RunTime:0.000609s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 1130 LIMIT 1 [ RunTime:0.000629s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 804 LIMIT 1 [ RunTime:0.000603s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 805 LIMIT 1 [ RunTime:0.000584s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 825 LIMIT 1 [ RunTime:0.001860s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 826 LIMIT 1 [ RunTime:0.000383s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 861 LIMIT 1 [ RunTime:0.000521s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 862 LIMIT 1 [ RunTime:0.000730s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 863 LIMIT 1 [ RunTime:0.001322s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 864 LIMIT 1 [ RunTime:0.001457s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 865 LIMIT 1 [ RunTime:0.000563s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 866 LIMIT 1 [ RunTime:0.000391s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 867 LIMIT 1 [ RunTime:0.000456s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000624s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 72 LIMIT 1 [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 76 LIMIT 1 [ RunTime:0.000486s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 123 LIMIT 1 [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 138 LIMIT 1 [ RunTime:0.000593s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 179 LIMIT 1 [ RunTime:0.000545s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 180 LIMIT 1 [ RunTime:0.000614s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 212 LIMIT 1 [ RunTime:0.000541s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 217 LIMIT 1 [ RunTime:0.000434s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 300 LIMIT 1 [ RunTime:0.000495s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 305 LIMIT 1 [ RunTime:0.000469s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 779 LIMIT 1 [ RunTime:0.000441s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 1109 LIMIT 1 [ RunTime:0.000456s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 1116 LIMIT 1 [ RunTime:0.000423s ]
+---------------------------------------------------------------
+
+[2020-07-08T16:57:09+08:00] 127.0.0.1 GET tofu.com/index/brand/details.html?id=813
+[运行时间：0.815139s] [吞吐率：1.23req/s] [内存消耗：3,497.02kb] [文件加载：110]
+[ info ] [ LANG ] F:\gitProject\tofu\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ucrt74p3f6mmjb62oc30ed913h',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tofu.com/index/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'tofu.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '813',
+)
+[ info ] [ VIEW ] F:\gitProject\tofu\application\index\view\brand\details.html [ array (
+  0 => 'page_img',
+  1 => 'title',
+  2 => 'config',
+  3 => 'nav',
+  4 => 'footer',
+  5 => 'menu',
+  6 => 'nav_pid',
+  7 => 'nav_id',
+  8 => 'details',
+  9 => 'up',
+  10 => 'lo',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004816s ] mysql:host=127.0.0.1;port=3306;dbname=tofu;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_config` [ RunTime:0.043076s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `dp_admin_config` [ RunTime:0.000605s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_module` [ RunTime:0.033176s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `dp_admin_module` WHERE  `config` <> '' [ RunTime:0.002491s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook` [ RunTime:0.034141s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_hook` WHERE  `status` = 1 [ RunTime:0.000567s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_plugin` [ RunTime:0.034127s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_plugin` WHERE  `status` = 1 [ RunTime:0.000660s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook_plugin` [ RunTime:0.034507s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_hook_plugin` WHERE  `status` = 1 ORDER BY `hook`,`sort` [ RunTime:0.000563s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_home_navigation` [ RunTime:0.033865s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title` FROM `dp_home_navigation` WHERE  `url_value` = 'index/brand/details'  AND `pid` <> 0 LIMIT 1 [ RunTime:0.000399s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 38  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_home_page_img` [ RunTime:0.031132s ]
+[ sql ] [ SQL ] SELECT `id`,`alt`,`title`,`img` FROM `dp_home_page_img` WHERE  ( find_in_set('67',pid) ) ORDER BY `sort` LIMIT 1 [ RunTime:0.002519s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_configuration` [ RunTime:0.040263s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_configuration` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000444s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 0  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000365s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 1  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000280s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 38  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000290s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 43  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000400s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 50  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000277s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 53  AND `status` = 1 ORDER BY `sort` [ RunTime:0.001266s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 58  AND `status` = 1 ORDER BY `sort` [ RunTime:0.002044s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 66  AND `status` = 1 ORDER BY `sort` [ RunTime:0.002127s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 63  AND `status` = 1 ORDER BY `sort` [ RunTime:0.000608s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 0  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000949s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 38  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 43  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 50  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000373s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 53  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 58  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000294s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 66  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000271s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`alt`,`url_value`,`params` FROM `dp_home_navigation` WHERE  `pid` = 63  AND `footer` = 1 ORDER BY `sort` [ RunTime:0.000278s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_home_news` [ RunTime:0.038512s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`time`,`content` FROM `dp_home_news` WHERE  `id` = 813 LIMIT 1 [ RunTime:0.001487s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `dp_home_news` WHERE  `id` < 813 ORDER BY `id` DESC,`sort` LIMIT 1 [ RunTime:0.023879s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `dp_home_news` WHERE  `id` > 813 ORDER BY `id` DESC,`sort` LIMIT 1 [ RunTime:0.000845s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_attachment` [ RunTime:0.030815s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 1116 LIMIT 1 [ RunTime:0.000890s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 1110 LIMIT 1 [ RunTime:0.000626s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 1109 LIMIT 1 [ RunTime:0.000700s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 1116 LIMIT 1 [ RunTime:0.000597s ]
