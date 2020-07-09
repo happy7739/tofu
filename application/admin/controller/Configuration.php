@@ -32,7 +32,7 @@ class Configuration extends Admin
             $data['id'] = 1;
 
             $ConfigurationModel = new ConfigurationModel();
-            if ($Configuration = $ConfigurationModel->allowField(['keywords', 'description', 'mobile', 'tel', 'avatar','logo','wx_img','address','ico'])->update($data)) {
+            if ($Configuration = $ConfigurationModel->allowField(['keywords', 'description', 'mobile', 'tel', 'avatar','logo','logo_f','wx_img','address','ico'])->update($data)) {
                 // 记录行为
                 action_log('configuration_edit', 'admin_configuration', UID, UID, get_nickname(UID));
                 $this->success('编辑成功');
@@ -56,6 +56,7 @@ class Configuration extends Admin
                 ['text', 'email', '邮箱', ''],
                 //['images', 'icon', 'icon'],
                 ['image', 'logo', 'logo'],
+                ['image', 'logo_f', '底部logo'],
                 ['image', 'wx_img', '微信公众号二维码'],
                 ['text', 'address', '地址']
             ])
