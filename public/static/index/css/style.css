@@ -50,7 +50,7 @@ h6 {
 p {
 	margin: 0;
 	font-size: 0.95em;
-	color: #888;
+	color: black;
 	line-height: 2em;
 	letter-spacing: 1px;
 }
@@ -1214,7 +1214,6 @@ footer {
 }
 
 .subscribe-main p {
-	color: #777;
 	letter-spacing: 1px;
 }
 
