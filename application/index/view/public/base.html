@@ -38,7 +38,8 @@
 </div>
 {/empty}
 {notempty name='page_img'}
-<div class="banner-inner" style="background-image: url({$page_img.img|get_file_path});">
+<div>
+    <img src="{$page_img.img|get_file_path}" height="100%" width="100%">
 </div>
 {/notempty}
 <!--//banner-->
