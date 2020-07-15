@@ -15,6 +15,9 @@ class Brand extends Home
     public function index(){
         return view();
     }
+    public function index_bat(){
+        return view();
+    }
     //品牌文化
     public function culture(){
         return view();
